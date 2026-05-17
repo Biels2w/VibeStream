@@ -28,6 +28,11 @@ header {
 
 .navegacao-header a {
     color: white;
+    transition: transform 0.2s ease;
+}
+
+.navegacao-header a:hover {
+    transform: scale(1.2);
 }
 
 .navegacao-header {
@@ -35,8 +40,13 @@ header {
 }
 
 .login {
-    color: white;
     margin-left: auto;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.login:hover {
+    transform: scale(1.2);
 }
 
 .barra-busca {
