@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #3c1388 0%, #341088 30%, #771c98 70%);
+}
+
+.registro-box {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 15px;
+    color: white;
+    width: 350px;
+    max-width: 90%;
+    backdrop-filter: blur(10px);
+    border: 2px solid #000000;
+}
+
+.registro-box h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.registro-box p {
+    margin-bottom: 25px;
+    opacity: 0.8;
+    font-size: 15px;
+}
+
+.registro-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid black;
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.registro-box input:focus {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #8A2BE2;
+    box-shadow: 0 0 8px rgba(138, 43, 226, 0.5);
+}
+
+.registro-box button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-registrar {
+    width: 100%;
+    background: linear-gradient(to right, #8A2BE2, #00d9ff);
+}
+
+.btn-registrar:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+}
+
+.login-link {
+    font-size: 14px;
+    color: white;
+}
+
+.login-link a {
+    color: #00d9ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .registro-box {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    .registro-box h1 {
+        font-size: 24px;
+    }
+
+    .grupo-botao {
+        flex-direction: column;
+    }
+
+    .registro-box button {
+        width: 100%;
+    }
+}
