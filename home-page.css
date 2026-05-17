@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(23, 22, 22);
+}
+
+header {
+    background: linear-gradient(to left, #1C0A32, #8A2BE2);
+    z-index: 1000;
+    padding: 8px 16px;
+}
+
+.texto-logo h2 {
+    letter-spacing: 3px;
+    color: rgb(75, 238, 247);
+
+}
+
+.texto-logo span {
+    color: rgb(214, 54, 214);
+}
+
+
+.navegacao-header a {
+    color: white;
+}
+
+.navegacao-header {
+    padding-right: 28vh;
+}
+
+.login {
+    color: white;
+    margin-left: auto;
+}
+
+.barra-busca {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 8px 12px;
+    gap: 8px;
+}
+
+.barra-busca input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    width: 350px;
+    transition: width 0.4s ease;
+}
+
+.barra-busca input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.barra-busca button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+}
+
+.barra-busca input:focus {
+    width: 440px;
+}
