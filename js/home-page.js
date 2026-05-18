@@ -68,3 +68,4 @@ function animarOndas() {
 // INICIALIZAÇÃO
 // =========================================
 document.addEventListener('DOMContentLoaded', criarVisualizador);
+

@@ -115,12 +115,17 @@ LABEL
 }
 
 
-
 * {
     padding: 0;
     border: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.lista-playlists {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -261,4 +266,44 @@ header {
 #botao-identificar:hover {
     transform: scale(1.01);
     box-shadow: 8px 8px 25px rgba(138, 43, 226, 0.6);
+}
+
+.barra-lateral {
+    background: linear-gradient(to bottom, #2d0a5e 0%, #1a0640 50%, #0d0d1a 100%);
+    width: 15vh;
+    color: white;
+}
+
+
+.botao-lateral {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.botao-lateral:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: scale(1.1);
+}
+
+.card-musica {
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+.card-musica-capa {
+    width: 55px;
+    height: 55px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #3c1388, #771c98);
+    flex-shrink: 0;
+    margin-top: 20px;
 }
