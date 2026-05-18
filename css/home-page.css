@@ -1,3 +1,121 @@
+/* =========================================
+VISUALIZADOR — CONTAINER GERAL
+========================================= */
+.visualizador-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 62px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    width: 380px;
+}
+
+/* =========================================
+DISCO GIRATÓRIO
+========================================= */
+.disco-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+}
+
+.disco {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(#1a0640, #6d1eb8, #d639f5, #8edfeb, #6d1eb8, #1a0640);
+    animation: girar 4s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0 0 20px rgba(214, 57, 245, 0.4);
+}
+
+.disco-centro {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgb(23, 22, 22);
+    border: 3px solid rgba(255, 255, 255, 0.15);
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================================
+ONDAS PULSANTES AO REDOR DO DISCO
+========================================= */
+.onda-disco {
+    position: absolute;
+    border-radius: 50%;
+    border: 1.5px solid rgba(214, 57, 245, 0.4);
+    animation: pulsar 2s ease-out infinite;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes pulsar {
+    0% {
+        width: 100px;
+        height: 100px;
+        opacity: 0.7;
+    }
+
+    100% {
+        width: 160px;
+        height: 160px;
+        opacity: 0;
+    }
+}
+
+/* =========================================
+BARRAS DO VISUALIZADOR
+========================================= */
+.barras-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 70px;
+}
+
+.barra-viz {
+    width: 5px;
+    border-radius: 3px 3px 0 0;
+    background: linear-gradient(to top, #6d1eb8, #d639f5, #8edfeb);
+    transition: height 0.05s ease;
+    min-height: 6px;
+}
+
+/* =========================================
+LABEL
+========================================= */
+.vizualizador-label {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+
 * {
     padding: 0;
     border: 0;
