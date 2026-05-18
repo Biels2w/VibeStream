@@ -64,8 +64,16 @@ function animarOndas() {
     });
 }
 
-// =========================================
-// INICIALIZAÇÃO
-// =========================================
-document.addEventListener('DOMContentLoaded', criarVisualizador);
+const carrossel = document.querySelector('.carrossel');
 
+carrossel.innerHTML += carrossel.innerHTML;
+
+carrossel.scrollLeft = 0;
+
+carrossel.addEventListener('scroll', () => {
+    const fimDoScroll = carrossel.scrollWidth - carrossel.clientWidth;
+
+    if (carrossel.scrollLeft >= fimDoScroll - 5) {
+        carrossel.scrollLeft = 0;
+    }
+});

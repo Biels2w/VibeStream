@@ -130,6 +130,7 @@ LABEL
 
 body {
     background-color: rgb(23, 22, 22);
+    overflow-x: hidden;
 }
 
 header {
@@ -270,8 +271,9 @@ header {
 
 .barra-lateral {
     background: linear-gradient(to bottom, #2d0a5e 0%, #1a0640 50%, #0d0d1a 100%);
-    width: 15vh;
+    min-width: 85px;
     color: white;
+    flex-shrink: 0;
 }
 
 
@@ -306,4 +308,110 @@ header {
     background: linear-gradient(135deg, #3c1388, #771c98);
     flex-shrink: 0;
     margin-top: 20px;
+}
+
+
+
+
+
+/* =========================================
+SEÇÃO DE PLAYLISTS
+========================================= */
+.secao-playlist {
+    padding: 40px 0 20px;
+    background-color: #121212;
+    min-width: 0;
+}
+
+
+
+/* =========================================
+SEÇÃO — HEADER
+========================================= */
+.header-playlist {
+    padding: 0 25px;
+    margin-bottom: 16px;
+}
+
+.secao-titulo {
+    color: white;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.secao-link {
+    color: #8885A0;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: normal;
+    width: auto;
+    transition: color 0.2s;
+}
+
+.secao-link:hover {
+    color: white;
+}
+
+/* =========================================
+SEÇÃO — CARROSSEL
+========================================= */
+.carrossel {
+    overflow-x: auto;
+    margin: 0 25px;
+    padding-bottom: 14px;
+    scrollbar-width: thin;
+    scrollbar-color: #7B2FBE #1a0640;
+}
+
+
+
+
+.carrossel::-webkit-scrollbar {
+    height: 4px;
+}
+
+.carrossel::-webkit-scrollbar-track {
+    background: #1a0640;
+}
+
+.carrossel::-webkit-scrollbar-thumb {
+    background: #7B2FBE;
+    border-radius: 4px;
+}
+
+/* =========================================
+SEÇÃO — CARDS DE PLAYLIST
+========================================= */
+.playlist-card {
+    background: #1a0640;
+    border-radius: 18px;
+    padding: 16px;
+    min-width: 160px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.playlist-card:hover {
+    transform: translateY(-4px);
+}
+
+.playlist-capa {
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.playlist-nome {
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.playlist-qtd {
+    color: #8885A0;
+    font-size: 13px;
 }
