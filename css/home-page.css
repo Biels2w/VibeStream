@@ -80,3 +80,42 @@ header {
 .barra-busca input:focus {
     width: 440px;
 }
+
+.banner {
+    min-height: 80vh;
+}
+
+.fundo-banner {
+    inset: 0;
+    background: linear-gradient(135deg, #1a0640 0%, #2d0a5e 30%, #0d0d1a 70%);
+    padding: 20px 60px;
+}
+
+.banner-esquerda {
+    display: flex;
+    flex: 1;
+    min-width: 280px;
+}
+
+.banner-direita {
+    flex-shrink: 0;
+}
+
+.texto-banner h2 {
+    font-size: 80px;
+    color: white;
+    margin-top: -15vh;
+}
+
+.texto-banner span {
+    background: linear-gradient(135deg, #8edfeb, #d639f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtexto-banner {
+    color: rgba(255, 255, 255, 0.509);
+    line-height: 1.3;
+    font-size: 15px;
+    max-width: 480px;
+}
