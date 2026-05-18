@@ -64,6 +64,13 @@ function animarOndas() {
     });
 }
 
+// =========================================
+// INICIALIZAÇÃO
+// =========================================
+document.addEventListener('DOMContentLoaded', criarVisualizador);
+
+
+
 const carrossel = document.querySelector('.carrossel');
 
 carrossel.innerHTML += carrossel.innerHTML;
