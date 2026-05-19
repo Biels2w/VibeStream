@@ -84,3 +84,51 @@ carrossel.addEventListener('scroll', () => {
         carrossel.scrollLeft = 0;
     }
 });
+
+
+// =========================================
+// OVERFLOW ARTISTAS — arrastar com mouse
+// =========================================
+const artistasGeral = document.getElementById('artistas-geral');
+
+// Scroll infinito — duplica o conteúdo
+artistasGeral.innerHTML += artistasGeral.innerHTML;
+artistasGeral.scrollLeft = 0;
+
+artistasGeral.addEventListener('scroll', () => {
+    const fimDoScroll = artistasGeral.scrollWidth - artistasGeral.clientWidth;
+
+    if (artistasGeral.scrollLeft >= fimDoScroll - 5) {
+        artistasGeral.scrollLeft = 0;
+    }
+});
+
+// Arrastar com mouse
+let isDown = false;
+let startX;
+let scrollLeft;
+
+artistasGeral.addEventListener('mousedown', (e) => {
+    isDown = true;
+    artistasGeral.style.cursor = 'grabbing';
+    startX = e.pageX - artistasGeral.offsetLeft;
+    scrollLeft = artistasGeral.scrollLeft;
+});
+
+artistasGeral.addEventListener('mouseleave', () => {
+    isDown = false;
+    artistasGeral.style.cursor = 'grab';
+});
+
+artistasGeral.addEventListener('mouseup', () => {
+    isDown = false;
+    artistasGeral.style.cursor = 'grab';
+});
+
+artistasGeral.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - artistasGeral.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    artistasGeral.scrollLeft = scrollLeft - walk;
+});

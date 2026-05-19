@@ -363,9 +363,6 @@ SEÇÃO — CARROSSEL
     scrollbar-color: #7B2FBE #1a0640;
 }
 
-
-
-
 .carrossel::-webkit-scrollbar {
     height: 4px;
 }
@@ -414,4 +411,283 @@ SEÇÃO — CARDS DE PLAYLIST
 .playlist-qtd {
     color: #8885A0;
     font-size: 13px;
+}
+
+/*-----------------------------------------------------*/
+/* =========================================
+   ARTISTAS POPULARES
+========================================= */
+.artistas-populares {
+    background-color: #121212;
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+}
+
+.artistas-header {
+    padding: 0 25px;
+    margin-bottom: 16px;
+}
+
+.artistas-populares h2 {
+    color: white;
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
+.artistas-link {
+    color: #8885A0;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: normal;
+    transition: color 0.2s;
+}
+
+.artistas-link:hover {
+    color: white;
+}
+
+/* =========================================
+   ARTISTAS — CARROSSEL
+========================================= */
+.artistas-geral {
+    gap: 35px;
+    overflow-x: auto;
+    margin: 0 25px;
+    padding-bottom: 14px;
+    scrollbar-width: thin;
+    scrollbar-color: #7B2FBE #1a0640;
+}
+
+.artistas-geral::-webkit-scrollbar {
+    height: 4px;
+}
+
+.artistas-geral::-webkit-scrollbar-track {
+    background: #1a0640;
+}
+
+.artistas-geral::-webkit-scrollbar-thumb {
+    background: #7B2FBE;
+    border-radius: 4px;
+}
+
+/* =========================================
+   ARTISTAS — CARD
+========================================= */
+.artista {
+    text-align: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.artista:hover {
+    transform: translateY(-4px);
+}
+
+.icone {
+    width: 120px;
+    height: 120px;
+    background: #1a0640;
+    border-radius: 50%;
+    margin: 0 auto 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nome {
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 4px;
+    color: white;
+}
+
+.genero {
+    font-size: 13px;
+    color: #8885A0;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+/* =========================================
+RESPONSIVIDADE — TABLETS PEQUENOS (max 768px)
+========================================= */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        .navegacao-header {
+            display: none;
+        }
+    }
+
+    .texto-logo img {
+        width: 80px;
+        height: 65px;
+    }
+
+    .navegacao-header {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .barra-busca input {
+        width: 160px;
+    }
+
+    .barra-busca input:focus {
+        width: 200px;
+    }
+
+    .login {
+        margin-left: 0;
+    }
+
+    /* BANNER */
+    .fundo-banner {
+        padding: 30px 24px;
+        justify-content: center;
+    }
+
+    .texto-banner h2 {
+        font-size: 48px;
+        margin-top: 0;
+    }
+
+    .banner-direita {
+        display: none;
+    }
+
+    /* BARRA LATERAL */
+    .barra-lateral {
+        min-width: 65px;
+    }
+
+    .botao-lateral svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .card-musica-capa {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* CARROSSEL */
+    .playlist-card {
+        min-width: 130px;
+    }
+
+    .playlist-capa {
+        width: 130px;
+        height: 130px;
+        font-size: 36px;
+    }
+}
+
+/* =========================================
+RESPONSIVIDADE — CELULARES (max 480px)
+========================================= */
+@media (max-width: 480px) {
+
+    /* HEADER */
+    .texto-logo h2 {
+        font-size: 16px;
+    }
+
+    .barra-busca {
+        display: none !important;
+    }
+
+    /* BANNER */
+    .banner {
+        min-height: 60vh;
+    }
+
+    .fundo-banner {
+        padding: 24px 16px;
+    }
+
+    .texto-banner h2 {
+        font-size: 36px;
+    }
+
+    .subtexto-banner br {
+        display: none;
+    }
+
+    .subtexto-banner p {
+        font-size: 13px;
+    }
+
+    #botao-play,
+    .ouvindo-agora {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    /* BARRA LATERAL */
+    .barra-lateral {
+        min-width: 55px;
+    }
+
+    .botao-lateral {
+        margin-top: 12px;
+        padding: 6px;
+    }
+
+    .botao-lateral svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .card-musica-capa {
+        width: 38px;
+        height: 38px;
+        margin-top: 12px;
+    }
+
+    .card-musica-capa svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    /* SEÇÃO PLAYLIST */
+    .secao-titulo {
+        font-size: 15px;
+    }
+
+    .carrossel {
+        margin: 0 12px;
+    }
+
+    .playlist-card {
+        min-width: 110px;
+        padding: 10px;
+    }
+
+    .playlist-capa {
+        width: 110px;
+        height: 110px;
+        font-size: 28px;
+    }
+
+    .playlist-nome {
+        font-size: 11px;
+    }
+
+    .playlist-qtd {
+        font-size: 11px;
+    }
 }
