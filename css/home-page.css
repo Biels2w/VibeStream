@@ -214,6 +214,7 @@ header {
     padding: 40px 0 20px;
     background-color: #121212;
     min-width: 0;
+    overflow: visible;
 }
 
 .header-playlist {
@@ -305,7 +306,7 @@ header {
     background-color: #121212;
     color: white;
     padding: 40px 0 20px;
-    margin-top: 50px;
+    overflow: visible;
 }
 
 .artistas-header {
@@ -340,6 +341,7 @@ header {
     overflow-x: auto;
     margin: 0 25px;
     padding-bottom: 14px;
+    padding-top: 8px;
     scrollbar-width: thin;
     scrollbar-color: #7B2FBE #1a0640;
 }
@@ -362,10 +364,13 @@ header {
     flex-shrink: 0;
     cursor: pointer;
     transition: transform 0.2s;
+    position: relative;
+    z-index: 1;
 }
 
 .artista:hover {
     transform: translateY(-4px);
+    z-index: 10;
 }
 
 .icone {
@@ -391,6 +396,37 @@ header {
     color: #8885A0;
     margin: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* =========================================
    VISUALIZADOR — CONTAINER GERAL

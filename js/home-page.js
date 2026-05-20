@@ -102,33 +102,3 @@ artistasGeral.addEventListener('scroll', () => {
         artistasGeral.scrollLeft = 0;
     }
 });
-
-// Arrastar com mouse
-let isDown = false;
-let startX;
-let scrollLeft;
-
-artistasGeral.addEventListener('mousedown', (e) => {
-    isDown = true;
-    artistasGeral.style.cursor = 'grabbing';
-    startX = e.pageX - artistasGeral.offsetLeft;
-    scrollLeft = artistasGeral.scrollLeft;
-});
-
-artistasGeral.addEventListener('mouseleave', () => {
-    isDown = false;
-    artistasGeral.style.cursor = 'grab';
-});
-
-artistasGeral.addEventListener('mouseup', () => {
-    isDown = false;
-    artistasGeral.style.cursor = 'grab';
-});
-
-artistasGeral.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - artistasGeral.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    artistasGeral.scrollLeft = scrollLeft - walk;
-});
